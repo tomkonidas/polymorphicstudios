@@ -17,7 +17,7 @@ const del = require('del');
 const target = {
     //src
     srcHTML: 'src/*.html',
-    srcFavicon: 'src/images/favicon/*',
+    srcFavicon: 'src/favicon/*',
     srcSASS: 'src/sass/*.sass',
     srcJS: 'src/js/*.js',
     srcIMG: 'src/images/*',

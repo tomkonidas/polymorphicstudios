@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Canadian Audio/Visual Production Studio">
+    <meta name="author" content="Tom Konidas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -10,12 +12,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="apple-mobile-web-app-title" content="JP Charlebois">
-    <meta name="application-name" content="Kalikori Olive Oil">
+    <meta name="apple-mobile-web-app-title" content="Polymorphic Studios">
+    <meta name="application-name" content="Polymorphic Studios">
     <meta name="msapplication-TileColor" content="#f7b617">
     <meta name="theme-color" content="#f7b617">
-    <meta name="author" content="Tom Konidas">
+
     <title>Polymorphic Studios</title>
+
     <!-- Loading CSS -->
     <link rel="stylesheet" href="assets/css/main.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -28,68 +31,96 @@
                 <!-- Logo -->
                 <div class="level-item has-text-centered">
                     <div class="landingLogo animate fadeIn one">
-                        <img src="assets/images/logo.svg" alt="Logo" width="900">              
-                    </div>
-                </div>      
-            </div>
-        </div>
-    </section>   
-
-    <!-- Contact Form -->
-    <section class="section is-large">
-        <div class="container">
-
-            <h1 class="title">Get In Touch</h1>
-
-            <div class="field is-horizontal">
-                <div class="field-body">
-                    <div class="field">
-                        <p class="control is-expanded has-icons-left">
-                            <input class="input" type="text" placeholder="Name">
-                            <span class="icon is-small is-left">
-                                <i class="fa fa-user"></i>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="field">
-                        <p class="control is-expanded has-icons-left has-icons-right">
-                            <input id="email" class="input" type="email" placeholder="Email" >
-                            <span class="icon is-small is-left">
-                                <i class="fa fa-envelope"></i>
-                            </span>
-                        </p>
+                        <img src="assets/images/polymorphicstudios.svg" alt="Polymorphic Studios" width="900">
                     </div>
                 </div>
             </div>
-
-            <div class="field is-horizontal">
-    
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <textarea class="textarea" placeholder="Message..."></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="field is-horizontal">
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <button class="button is-info" value="Submit" onclick="ValidateEmail()">
-                                Send
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <section style="background: url(assets/images/inaction.jpg) no-repeat center center / cover" class="hero is-fullheight"></section>     
-    
+    <!-- Spotify -->
+    <section class="hero is-medium is-bold is-dark">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Listen</h1>
+                <h2 class="subtitle">Mix/Master/Reamp</h2>
+                <iframe src="https://open.spotify.com/embed/user/tomkonidas/playlist/5WJqAejPSxobhmIYpYg7yF" width="100%" height="380" frameborder="0"
+                    allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Youtube -->
+    <!-- <section class="hero is-medium is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Visualize</h1>
+                <h2 class="subtitle">Directed/Edited/Colored</h2>
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/?playlist=d9zPfmOk7OQ,xK5AX3uaTK4,jHp7QHK6Yrk" frameborder="0"
+                    allowfullscreen>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- Contact Form -->
+    <section class="hero is-large is-bold is-light">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Get In Touch</h1>
+
+                <form name="Polymorphic Studios Contact Form" method="POST" netlify>
+                    <div class="field is-horizontal">
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control is-expanded has-icons-left">
+                                    <input class="input" type="text" name="name" placeholder="Name">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <p class="control is-expanded has-icons-left has-icons-right">
+                                    <input class="input" type="email" name="email" placeholder="Email">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <textarea class="textarea" name="message" placeholder="Message..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-info" value="submit">
+                                        Send
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <section style="background: url(assets/images/inaction.jpg) no-repeat center center / cover" class="hero is-fullheight"></section>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -100,7 +131,9 @@
                         <span class="icon"><i class="fab fa-spotify fa-2x"></i></span>
                     </a> -->
                     <a href="https://www.facebook.com/polymorphicstudios">
-                        <span class="icon"><i class="fab fa-facebook-f fa-2x"></i></span>
+                        <span class="icon">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </span>
                     </a>
                     <!-- <a href="">
                         <span class="icon"><i class="fab fa-youtube fa-2x"></i></span>
@@ -108,10 +141,11 @@
                 </div>
                 <br>
                 <a href="https://polymorphicstudios.com">
-                    <img src="assets/images/logo2.svg" alt="Logo" width="100">
+                    <img src="assets/images/polymorphicstudios2.svg" alt="Polymorphic Studios" width="100">
                 </a>
             </div>
-            <p class="content has-text-centered">&copy;<span id="currentYear"></span> POLYMORPHICSTUDIOS.COM</p>
+            <p class="content has-text-centered">&copy;
+                <span id="currentYear"></span> POLYMORPHICSTUDIOS.COM</p>
         </div>
     </footer>
 

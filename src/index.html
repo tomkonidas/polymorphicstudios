@@ -30,16 +30,25 @@
             <div class="container">
                 <!-- Logo -->
                 <div class="level-item has-text-centered">
-                    <div class="landingLogo animate fadeIn one">
+                    <div class="animate fadeIn one">
                         <img src="assets/images/polymorphicstudios.svg" alt="Polymorphic Studios" width="900">
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-foot">
+            <div class="content has-text-centered">
+                <div class="animate fadeInDown three">
+                    <a href="#listen">
+                        <span class="icon"><i class="fas fa-arrow-down fa-2x"></i></span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Spotify -->
-    <section class="hero is-medium is-bold is-dark">
+    <section class="hero is-medium is-bold is-dark" id="listen">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">Listen</h1>
@@ -64,57 +73,60 @@
 
 
     <!-- Contact Form -->
-    <section class="hero is-large is-bold is-light">
+    <section class="hero is-medium is-bold is-dark">
         <div class="hero-body">
             <div class="container">
-                <h1 class="title">Get In Touch</h1>
-
-                <form name="Polymorphic Studios Contact Form" method="POST" netlify>
-                    <div class="field is-horizontal">
-                        <div class="field-body">
-                            <div class="field">
-                                <p class="control is-expanded has-icons-left">
-                                    <input class="input" type="text" name="name" placeholder="Name">
-                                    <span class="icon is-small is-left">
-                                        <i class="fa fa-user"></i>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="field">
-                                <p class="control is-expanded has-icons-left has-icons-right">
-                                    <input class="input" type="email" name="email" placeholder="Email">
-                                    <span class="icon is-small is-left">
-                                        <i class="fa fa-envelope"></i>
-                                    </span>
-                                </p>
-                            </div>
-                        </div>
+                <div class="columns">
+                    <div class="column is-one-quarter tablet">
+                        <figure class="image is-4by5">
+                                <img class="headshot" src="assets/images/tomkonidas.jpg">
+                        </figure>
                     </div>
-
-                    <div class="field is-horizontal">
-
-                        <div class="field-body">
-                            <div class="field">
-                                <div class="control">
-                                    <textarea class="textarea" name="message" placeholder="Message..."></textarea>
+                <div class="column contactColumn">
+                    <h1 class="title">Get in touch.</h1>
+                    <form name="Polymorphic Studios Contact Form" method="POST" netlify>
+                        <div class="field is-horizontal">
+                            <div class="field-body">
+                                <div class="field">
+                                    <p class="control is-expanded has-icons-left">
+                                        <input class="input" type="text" name="name" placeholder="Name">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <p class="control is-expanded has-icons-left has-icons-right">
+                                        <input class="input" type="email" name="email" placeholder="Email">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="field is-horizontal">
-                        <div class="field-body">
-                            <div class="field">
-                                <div class="control">
-                                    <button class="button is-info" value="submit">
-                                        Send
-                                    </button>
+                        <div class="field is-horizontal">
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <textarea class="textarea" name="message" placeholder="Message..."></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </form>
-
+                        <div class="field is-horizontal">
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-info" value="submit">
+                                            Send
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -142,6 +154,11 @@
                 <br>
                 <a href="https://polymorphicstudios.com">
                     <img src="assets/images/polymorphicstudios2.svg" alt="Polymorphic Studios" width="100">
+                </a>
+                <br>
+                <br>
+                <a href="https://tomkonidas.com">
+                    <img src="assets/images/tomkonidas.svg" alt="Logo" width="220">
                 </a>
             </div>
             <p class="content has-text-centered">&copy;

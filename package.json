@@ -7,10 +7,11 @@
   "author": "Tom Konidas <tomkonidas@protonmail.ch>",
   "license": "MIT",
   "dependencies": {
-    "bulma": "^0.6.2"
+    "bulma": "^0.6.2",
+    "natives": "^1.1.6"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.26.3",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",

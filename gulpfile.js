@@ -34,14 +34,14 @@ const target = {
 
 // HTML
 gulp.task('html', () => {
-    gulp.src(target.srcHTML)
+    return gulp.src(target.srcHTML)
         .pipe(gulp.dest(target.dist))
         .pipe(browserSync.stream());
 });
 
 // Bring over items
 gulp.task('transfer', () => {
-    gulp.src([target.srcFavicon])
+    return gulp.src([target.srcFavicon])
         .pipe(gulp.dest(target.dist))
         .pipe(browserSync.stream());
 });
@@ -62,7 +62,7 @@ gulp.task('sass', () => {
 
 // Javascript
 gulp.task('js', () => {
-    gulp.src(target.srcJS)
+    return gulp.src(target.srcJS)
         .pipe(concat('bundle.js'))
         .pipe(uglify())
         .pipe(rename('bundle.min.js'))
@@ -72,7 +72,7 @@ gulp.task('js', () => {
 
 // Images
 gulp.task('image', () => {
-    gulp.src(target.srcIMG)
+    return gulp.src(target.srcIMG)
         .pipe(imagemin())
         .pipe(gulp.dest(target.distIMG))
         .pipe(browserSync.stream());
@@ -81,27 +81,27 @@ gulp.task('image', () => {
 
 
 // Clean & Build --------------------------------------------------------------
-gulp.task('build', ['js', 'sass', 'image', 'transfer','html']);
+gulp.task('build', gulp.series('js', 'sass', 'image', 'transfer','html'));
 
 gulp.task('clean', () => {
-    del([target.dist]).then(paths => {
+    return del([target.dist]).then(paths => {
         console.log('Cleaning project...');
     });
 })
 
 // Auto Reload & Watch --------------------------------------------------------
 gulp.task('browser-sync', () => {
-    browserSync.init({
+    return browserSync.init({
         server: target.dist
     });
 });
 
-gulp.task('watch', ['build','browser-sync'], () => {
+gulp.task('watch', gulp.series('build','browser-sync', (done) => {
     gulp.watch([target.srcSASS], ['sass']);
     gulp.watch([target.srcFavicon], ['transfer']);
     gulp.watch([target.srcJS], ['js']);
     gulp.watch([target.srcIMG], ['image']);
-    gulp.watch([target.srcHTML], ['html']);
-});
+    gulp.watch([target.srcHTML], ['html'],done);
+}));
 
-gulp.task('default', ['watch']);
+gulp.task('default', gulp.series('watch'));
